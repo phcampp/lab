@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Style</title>
+    <style>
+        body {
+            background-color: #000; /* Fundo preto */
+            color: #0f0; /* Texto verde */
+            font-family: 'Courier New', Courier, monospace; /* Fonte estilo hacker */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #0f0;
+        }
+
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 1rem;
+            border: 2px solid #0f0;
+            border-radius: 5px;
+            background-color: #000;
+            color: #0f0;
+            outline: none;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #0f0;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background-color: #000;
+            color: #0f0;
+            border: 2px solid #0f0;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            text-shadow: 0 0 5px #0f0;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo, Phelippe!</h1>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Puxar dados...">
+        <button onclick="showMessage()">Enviar</button>
+        <div id="message" class="message"></div>
+    </div>
+    <footer>&copy; 2024 Phelippe</footer>
+
+    <script>
+        function showMessage() {
+            const input = document.getElementById('searchInput').value;
+            const messageDiv = document.getElementById('message');
+            if (input.trim() !== "") {
+                messageDiv.textContent = "Derrubar";
+            } else {
+                messageDiv.textContent = "Por favor, insira algum dado.";
+            }
+        }
+    </script>
+</body>
+</html>
